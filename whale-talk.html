@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Whale-Talk Translater</title>
+  <style type="text/css">
+    body {
+      background-color: powderblue;
+    }
+
+    h1, h2 {
+      text-align: center;
+    }
+
+    img {
+      display: block;
+      margin: 0 auto;
+    }
+  </style>
+</head>
+<body>
+<h1>Welcome to Whale-Talk Translater</h1>
+<br>
+<!-- Whale Imgae -->
+<img src="https://cdn.pixabay.com/photo/2012/04/01/12/31/orca-23182_960_720.png" alt="Side profile image of an adult killer whale" height="50%" width="50%">
+
+
+<h2>Refresh the page to translate agian</h2>
+<!-- Whate talk logic -->
+<script>
+
+var input = prompt("Enter a phrase to translate to whale talk");
+var vowels = ['a', 'e', 'i', 'o', 'u'];
+var resultArray = [];
+
+  for (var i = 0; i < input.length; i++) {
+    for (var j = 0; j < vowels.length; j++) {
+      if (input[i] === vowels[j]) {
+        resultArray.push(input[i]);
+      }
+    }
+     if (input[i] === 'e' || input[i] === 'u') {
+      resultArray.push(input[i]);
+    }
+  }
+
+alert(resultArray.join('').toUpperCase());
+
+</script>
+</body>
+</html>
